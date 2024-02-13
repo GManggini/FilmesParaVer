@@ -1,0 +1,82 @@
+:root {
+    --primary-color:#E50914;
+    --ligth-primary:#B81D24;
+    --ligthest-color:#F5F5F1; 
+    --secondary-color:#221F1F;
+    --darkness-color: #000; 
+}
+
+#modalOverlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    visibility: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.open{
+    visibility: visible;
+    opacity: 1;
+}
+
+#modalBackground {
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.4;    
+}
+
+#modalContainer {
+    z-index: 1;
+    background-color: var(--ligth-primary);
+    padding: 1rem 3rem;
+    border-radius: 10px;    
+}
+
+#movieTitle{
+    padding: 1rem 0;
+}
+
+#modalBody{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+/*#moviePoster {
+    border-radius: 10px;
+}*/
+
+#movieInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    max-width: 300px    ;
+}
+
+#addToList {
+    border: 3px solid var(--darkness-color);
+    padding: 0.3 rem 0;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px var(--darkness-color);
+}
+
+#addToList:focus,
+#addToList:hover {
+    background-color: var(--secondary-color);
+    color: var(--ligthest-color) ;
+}
